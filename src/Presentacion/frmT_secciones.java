@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Blady
  */
-public class frmT_secciones extends javax.swing.JInternalFrame {
+public class frmT_secciones extends javax.swing.JFrame {
 
     public frmT_secciones() {
         initComponents();
@@ -100,9 +100,6 @@ public class frmT_secciones extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
 
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N

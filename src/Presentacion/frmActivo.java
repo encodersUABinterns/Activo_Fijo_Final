@@ -49,6 +49,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
         btnguardar.setEnabled(false);
         btncancelar.setEnabled(false);
         btneliminar.setEnabled(false);
+        btnbuscardptos.setEnabled(false);
 
         txtid_activo.setText("");
         txtcod.setText("");
@@ -69,6 +70,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
         btnguardar.setEnabled(true);
         btncancelar.setEnabled(true);
         btneliminar.setEnabled(true);
+        btnbuscardptos.setEnabled(true);
 
         txtid_activo.setText("");
         txtcod.setText("");

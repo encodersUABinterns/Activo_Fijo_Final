@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Blady
  */
-public class frmT_area2 extends javax.swing.JInternalFrame {
+public class frmT_area2 extends javax.swing.JFrame {
 
     /**
      * Creates new form frmT_area2
@@ -86,6 +86,7 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
         btnguardar.setEnabled(true);
         btncancelar.setEnabled(true);
         btneliminar.setEnabled(true);
+        btnbuscararea.setEnabled(true);
 
         txtidarea.setText("");
     }
@@ -125,10 +126,7 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
 
-        setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setIconifiable(true);
-        setMaximizable(true);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("FACULTADES / SUBAREAS");
