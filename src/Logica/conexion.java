@@ -13,10 +13,10 @@ import javax.swing.JOptionPane;
 
 public class conexion {
 
-    public String db = "bd_activos_fijos";
-    public String url = "jdbc:postgresql://localhost:5432/" + db;
+    public String db = "Activo_fijo";
+    public String url = "jdbc:postgresql://192.168.1.125:5432/" + db;
     public String user = "postgres";
-    public String pass = "abnishaday";
+    public String pass = "DTICSW15.";
     public Connection conexion = null;
 
     public conexion() {
