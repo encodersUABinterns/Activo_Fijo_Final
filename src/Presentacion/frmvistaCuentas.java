@@ -174,8 +174,7 @@ public class frmvistaCuentas extends javax.swing.JFrame {
             cod=tablalistado.getValueAt(fila, 0).toString();
             valor=tablalistado.getValueAt(fila, 1).toString();
             
-            frmT_area1.txtidcuenta.setText(cod);
-            frmT_area1.txtcuenta.setText(valor);
+            
             this.dispose();
             
         }

@@ -28,7 +28,7 @@ public class fT_cuentas {
         String[] registro = new String[5];
         totalregistro = 0;
         modelo = new DefaultTableModel(null, titulos);
-        sSQL = ("Select* from t_cuentas where descripcion like '%" + buscar + "%' order by id_cuenta desc");
+        sSQL = ("Select * from t_cuentas where descripcion like '%" + buscar + "%' order by id_cuenta asc");
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);

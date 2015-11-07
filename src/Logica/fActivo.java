@@ -22,8 +22,8 @@ public class fActivo {
     public DefaultTableModel mostrar(String buscar) {
         DefaultTableModel modelo;
         
-        String[] titulos = {"ID", "cuenta", "codigo", "descripcion", "cant", "fecha_adq", "fecha_registro", "costo_adq", "depresiacion", "id_cuenta"};
-        String[] registro = new String[10];
+        String[] titulos = {"ID", "cuenta", "codigo", "descripcion", "cant", "fecha_adq", "fecha_registro", "costo_adq", "depresiacion", "id_cuenta","id_subareas"};
+        String[] registro = new String[11];
         totalregistro = 0;
         modelo = new DefaultTableModel(null, titulos);
         sSQL = ("Select * from t_activo where cuenta like '%" + buscar + "%'");
@@ -42,6 +42,7 @@ public class fActivo {
                 registro[7] = rs.getString("costo_adq");
                 registro[8] = rs.getString("depresiacion");
                 registro[9] = rs.getString("id_cuenta");
+                registro[9] = rs.getString("id_subareas");
 
                 totalregistro = totalregistro + 1;
                 modelo.addRow(registro);
@@ -55,8 +56,8 @@ public class fActivo {
     }
 
     public boolean insertar(vActivo dts) {
-        sSQL = "insert into t_activo (cuenta,codigo,descripcion,cant,fecha_adq,fecha_registro,costo_adq,depresiacion,id_cuenta)"
-                + "values (?,?,?,?,?,?,?,?,?)";
+        sSQL = "insert into t_activo (cuenta,codigo,descripcion,cant,fecha_adq,fecha_registro,costo_adq,depresiacion,id_cuenta,id_subareas)"
+                + "values (?,?,?,?,?,?,?,?,?,?)";
         try {
 
             PreparedStatement pst = cn.prepareStatement(sSQL);
@@ -69,6 +70,7 @@ public class fActivo {
             pst.setDouble(7, dts.getCosto_adq());
             pst.setDouble(8, dts.getDepresiacion());
             pst.setInt(9, dts.getId_cuenta());
+            pst.setInt(10, dts.getId_subarea());
 
             int n = pst.executeUpdate();
 
@@ -85,7 +87,7 @@ public class fActivo {
     }
 
     public boolean editar(vActivo dts) {
-        sSQL = "update t_activo set cuenta=?,codigo=?,descripcion=?,cant=?,fecha_adq=?,fecha_registro=?,costo_adq=?,depresiacion=?,id_cuenta=?"
+        sSQL = "update t_activo set cuenta=?,codigo=?,descripcion=?,cant=?,fecha_adq=?,fecha_registro=?,costo_adq=?,depresiacion=?,id_cuenta=?,id_subareas=?"
                 + " where id_activo=?";
 
         try {
@@ -99,6 +101,7 @@ public class fActivo {
             pst.setDouble(7, dts.getCosto_adq());
             pst.setDouble(8, dts.getDepresiacion());
             pst.setInt(9, dts.getId_cuenta());
+            pst.setInt(10, dts.getId_subarea());
 
             int n = pst.executeUpdate();
 

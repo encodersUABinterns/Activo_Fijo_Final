@@ -43,13 +43,21 @@ public class frmT_area2 extends javax.swing.JFrame {
         tablalistado.getColumnModel().getColumn(0).setMinWidth(0);
         tablalistado.getColumnModel().getColumn(0).setPreferredWidth(0);
 
-        tablalistado.getColumnModel().getColumn(1).setMaxWidth(0);
-        tablalistado.getColumnModel().getColumn(1).setMinWidth(0);
-        tablalistado.getColumnModel().getColumn(1).setPreferredWidth(0);
-
         tablalistado.getColumnModel().getColumn(2).setMaxWidth(0);
         tablalistado.getColumnModel().getColumn(2).setMinWidth(0);
         tablalistado.getColumnModel().getColumn(2).setPreferredWidth(0);
+
+        tablalistado.getColumnModel().getColumn(4).setMaxWidth(0);
+        tablalistado.getColumnModel().getColumn(4).setMinWidth(0);
+        tablalistado.getColumnModel().getColumn(4).setPreferredWidth(0);
+        
+        tablalistado.getColumnModel().getColumn(6).setMaxWidth(0);
+        tablalistado.getColumnModel().getColumn(6).setMinWidth(0);
+        tablalistado.getColumnModel().getColumn(6).setPreferredWidth(0);
+        
+        tablalistado.getColumnModel().getColumn(7).setMaxWidth(0);
+        tablalistado.getColumnModel().getColumn(7).setMinWidth(0);
+        tablalistado.getColumnModel().getColumn(7).setPreferredWidth(0);
     }
 
     void inhabilitar() {

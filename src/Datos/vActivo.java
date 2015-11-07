@@ -18,8 +18,9 @@ public class vActivo {
     private double costo_adq;
     private double depresiacion;
     private int id_cuenta;
+    private int id_subarea;
 
-    public vActivo(int id_activo, String cuenta, String codigo, String descripcion, int cant, Date fecha_adq, Date fecha_registro, double costo_adq, double depresiacion, int id_cuenta) {
+    public vActivo(int id_activo, String cuenta, String codigo, String descripcion, int cant, Date fecha_adq, Date fecha_registro, double costo_adq, double depresiacion, int id_cuenta,int id_subarea) {
         this.id_activo = id_activo;
         this.cuenta = cuenta;
         this.codigo = codigo;
@@ -30,6 +31,7 @@ public class vActivo {
         this.costo_adq = costo_adq;
         this.depresiacion = depresiacion;
         this.id_cuenta = id_cuenta;
+        this.id_subarea= id_subarea;
     }
 
     public vActivo() {
@@ -113,6 +115,20 @@ public class vActivo {
 
     public void setId_cuenta(int id_cuenta) {
         this.id_cuenta = id_cuenta;
+    }
+
+    /**
+     * @return the id_subarea
+     */
+    public int getId_subarea() {
+        return id_subarea;
+    }
+
+    /**
+     * @param id_subarea the id_subarea to set
+     */
+    public void setId_subarea(int id_subarea) {
+        this.id_subarea = id_subarea;
     }
     
 }

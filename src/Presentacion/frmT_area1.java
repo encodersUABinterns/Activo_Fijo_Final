@@ -24,7 +24,8 @@ public class frmT_area1 extends javax.swing.JFrame {
         mostrar("");
         inhabilitar();
     }
- private String accion = "guardar";
+    private String accion = "guardar";
+
     void mostrar(String buscar) {
         try {
             DefaultTableModel modelo;
@@ -45,45 +46,30 @@ public class frmT_area1 extends javax.swing.JFrame {
         tablalistado.getColumnModel().getColumn(0).setMinWidth(0);
         tablalistado.getColumnModel().getColumn(0).setPreferredWidth(0);
 
-        tablalistado.getColumnModel().getColumn(1).setMaxWidth(0);
-        tablalistado.getColumnModel().getColumn(1).setMinWidth(0);
-        tablalistado.getColumnModel().getColumn(1).setPreferredWidth(0);
-
-        tablalistado.getColumnModel().getColumn(2).setMaxWidth(0);
-        tablalistado.getColumnModel().getColumn(2).setMinWidth(0);
-        tablalistado.getColumnModel().getColumn(2).setPreferredWidth(0);
     }
 
     void inhabilitar() {
-        txtidcuenta.setVisible(false);
         txtidarea.setEnabled(false);
-        
+
         txtnombre.setEnabled(false);
         txtsigla.setEnabled(false);
-        txtcuenta.setEnabled(false);
 
         btnguardar.setEnabled(false);
         btncancelar.setEnabled(false);
         btneliminar.setEnabled(false);
-        btnbuscarcuenta.setEnabled(false);
 
-        txtidcuenta.setText("");
     }
 
     void habilitar() {
-        txtidcuenta.setVisible(false);
         txtidarea.setEnabled(false);
 
         txtnombre.setEnabled(true);
         txtsigla.setEnabled(true);
-        txtcuenta.setEnabled(true);
 
         btnguardar.setEnabled(true);
         btncancelar.setEnabled(true);
         btneliminar.setEnabled(true);
-
-        txtidcuenta.setText("");
-     }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -92,15 +78,11 @@ public class frmT_area1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnnuevo = new javax.swing.JButton();
         btnguardar = new javax.swing.JButton();
         btncancelar = new javax.swing.JButton();
         txtnombre = new javax.swing.JTextField();
-        txtidcuenta = new javax.swing.JTextField();
-        txtcuenta = new javax.swing.JTextField();
-        btnbuscarcuenta = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         txtsigla = new javax.swing.JTextField();
         txtidarea = new javax.swing.JTextField();
@@ -114,7 +96,7 @@ public class frmT_area1 extends javax.swing.JFrame {
         btneliminar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("AREAS");
@@ -124,8 +106,6 @@ public class frmT_area1 extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro de Areas"));
 
         jLabel2.setText("Categoria");
-
-        jLabel4.setText("Cuenta");
 
         jLabel7.setText("Estado:");
 
@@ -159,13 +139,6 @@ public class frmT_area1 extends javax.swing.JFrame {
             }
         });
 
-        btnbuscarcuenta.setText("...");
-        btnbuscarcuenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbuscarcuentaActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("SIGLA:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -184,18 +157,10 @@ public class frmT_area1 extends javax.swing.JFrame {
                             .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtsigla, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtidcuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtcuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnbuscarcuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(220, 220, 220)
                         .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel7))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnnuevo)
@@ -217,13 +182,7 @@ public class frmT_area1 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtsigla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtcuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtidcuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnbuscarcuenta))
-                .addGap(26, 26, 26)
+                .addGap(66, 66, 66)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnnuevo)
                     .addComponent(btncancelar)
@@ -366,11 +325,11 @@ public class frmT_area1 extends javax.swing.JFrame {
 
     private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
         // TODO add your handling code here:
-        if (txtidcuenta.getText().length() == 0) {
-            JOptionPane.showConfirmDialog(rootPane, "Debes Seleccionar una cuenta");
-            btnbuscarcuenta.requestFocus();
-            return;
-        }
+//        if (txtidcuenta.getText().length() == 0) {
+//            JOptionPane.showConfirmDialog(rootPane, "Debes Seleccionar una cuenta");
+//            btnbuscarcuenta.requestFocus();
+//            return;
+//        }
         if (txtsigla.getText().length() == 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes ingresar una sigla del area");
             txtsigla.requestFocus();
@@ -382,8 +341,7 @@ public class frmT_area1 extends javax.swing.JFrame {
 
         dts.setNombre(txtnombre.getText());
         dts.setSigla(txtsigla.getText());
-        dts.setId_cuenta(Integer.parseInt(txtidcuenta.getText()));
-       
+
         if (accion.equals("guardar")) {
             if (func.insertar(dts)) {
                 JOptionPane.showMessageDialog(rootPane, "El AREA ha sido registrada correctamente");
@@ -409,13 +367,6 @@ public class frmT_area1 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btncancelarActionPerformed
 
-    private void btnbuscarcuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarcuentaActionPerformed
-        // TODO add your handling code here:
-        frmvistaCuentas form = new frmvistaCuentas();
-        form.toFront();
-        form.setVisible(true);
-    }//GEN-LAST:event_btnbuscarcuentaActionPerformed
-
     private void tablalistadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMouseClicked
         // TODO add your handling code here:
         btnguardar.setText("Editar");
@@ -428,8 +379,7 @@ public class frmT_area1 extends javax.swing.JFrame {
         txtidarea.setText(tablalistado.getValueAt(fila, 0).toString());
         txtnombre.setText(tablalistado.getValueAt(fila, 1).toString());
         txtsigla.setText(tablalistado.getValueAt(fila, 2).toString());
-        txtcuenta.setText(tablalistado.getValueAt(fila, 3).toString());
-        txtidcuenta.setText(tablalistado.getValueAt(fila, 4).toString());
+
     }//GEN-LAST:event_tablalistadoMouseClicked
 
     private void txtidcuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidproductoActionPerformed
@@ -506,7 +456,6 @@ public class frmT_area1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnbuscar;
-    private javax.swing.JButton btnbuscarcuenta;
     private javax.swing.JButton btncancelar;
     private javax.swing.JButton btneliminar;
     private javax.swing.JButton btnguardar;
@@ -514,7 +463,6 @@ public class frmT_area1 extends javax.swing.JFrame {
     private javax.swing.JButton btnsalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
@@ -524,9 +472,7 @@ public class frmT_area1 extends javax.swing.JFrame {
     private javax.swing.JLabel lbltotalregistros;
     private javax.swing.JTable tablalistado;
     private javax.swing.JTextField txtbuscar;
-    public static javax.swing.JTextField txtcuenta;
     private javax.swing.JTextField txtidarea;
-    public static javax.swing.JTextField txtidcuenta;
     private javax.swing.JTextField txtnombre;
     private javax.swing.JTextField txtsigla;
     // End of variables declaration//GEN-END:variables

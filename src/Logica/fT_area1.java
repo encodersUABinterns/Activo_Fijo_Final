@@ -20,7 +20,8 @@ import javax.swing.table.DefaultTableModel;
 public class fT_area1 {
 
     private conexion conexi = new conexion();
-    private Connection cn = conexi.conectar();;
+    private Connection cn = conexi.conectar();
+    ;
     private String sSQL = "";
     public Integer totalregistro;
 
@@ -28,8 +29,8 @@ public class fT_area1 {
         DefaultTableModel modelo;
         Statement consulta = null;
 
-        String[] titulos = {"id_area1", "Nombre", "Sigla", "Id_Cuenta"};
-        String[] registro = new String[4];
+        String[] titulos = {"id_area1", "Nombre", "Sigla"};
+        String[] registro = new String[3];
         totalregistro = 0;
         modelo = new DefaultTableModel(null, titulos);
         sSQL = ("Select* from t_area1 where nombre like '%" + buscar + "%' order by id_area1 desc");
@@ -41,7 +42,6 @@ public class fT_area1 {
                 registro[0] = rs.getString("id_area1");
                 registro[1] = rs.getString("nombre");
                 registro[2] = rs.getString("sigla");
-                registro[3] = rs.getString("id_cuenta");
                 totalregistro = totalregistro + 1;
                 modelo.addRow(registro);
             }
@@ -55,14 +55,13 @@ public class fT_area1 {
     }
 
     public boolean insertar(vT_area1 dts) {
-        sSQL = "insert into t_area1 (nombre,sigla,id_cuenta)"
-                + "values (?,?,?,?)";
+        sSQL = "insert into t_area1 (nombre,sigla)"
+                + "values (?,?)";
         try {
 
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setString(1, dts.getNombre());
             pst.setString(2, dts.getSigla());
-            pst.setInt(3, dts.getId_cuenta());
             int n = pst.executeUpdate();
 
             if (n != 0) {
@@ -76,51 +75,50 @@ public class fT_area1 {
             return false;
         }
     }
-    public boolean editar (vT_area1 dts){
-       sSQL="update t_area1 set nombre=?,sigla=?,id_cuenta=?"+
-               " where id_area1=?";
-       
-       try {
-           PreparedStatement pst=cn.prepareStatement(sSQL);
-           pst.setString(1, dts.getNombre());
-           pst.setString(2, dts.getSigla());
-           pst.setInt(3, dts.getId_cuenta());
-                    
-           int n=pst.executeUpdate();
-           
-           if (n!=0){
-               return true;
-           }
-           else {
-               return false;
-           }
-           
-       } catch (Exception e) {
-           JOptionPane.showConfirmDialog(null, e);
-           return false;
-       }
-   }
-     public boolean eliminar (vT_area1 dts){
-       sSQL="delete from t_area1 where id_area1=?";
-       
-       try {
-           
-           PreparedStatement pst=cn.prepareStatement(sSQL);
-           
-           pst.setInt(1, dts.getId_area1());
-           
-           int n=pst.executeUpdate();
-           
-           if (n!=0){
-               return true;
-           }
-           else {
-               return false;
-           }
-           
-       } catch (Exception e) {
-           JOptionPane.showConfirmDialog(null, e);
-           return false;
-       }
-   }
+
+    public boolean editar(vT_area1 dts) {
+        sSQL = "update t_area1 set nombre=?,sigla=?"
+                + " where id_area1=?";
+
+        try {
+            PreparedStatement pst = cn.prepareStatement(sSQL);
+            pst.setString(1, dts.getNombre());
+            pst.setString(2, dts.getSigla());
+
+            int n = pst.executeUpdate();
+
+            if (n != 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+            return false;
+        }
+    }
+
+    public boolean eliminar(vT_area1 dts) {
+        sSQL = "delete from t_area1 where id_area1=?";
+
+        try {
+
+            PreparedStatement pst = cn.prepareStatement(sSQL);
+
+            pst.setInt(1, dts.getId_area1());
+
+            int n = pst.executeUpdate();
+
+            if (n != 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+            return false;
+        }
+    }
 }
