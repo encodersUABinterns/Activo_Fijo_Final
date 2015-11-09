@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Blady
  */
-public class frmT_area2 extends javax.swing.JFrame {
+public class frmT_area2 extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form frmT_area2

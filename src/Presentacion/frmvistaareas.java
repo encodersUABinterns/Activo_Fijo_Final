@@ -1,7 +1,11 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Presentacion;
 
-import Datos.vT_cuentas;
-import Logica.fT_cuentas;
+import Logica.fT_area1;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -9,12 +13,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Augustito
  */
-public class frmvistaCuentas extends javax.swing.JFrame {
+public class frmvistaareas extends javax.swing.JFrame {
 
     /**
-     * Creates new form frmvistaCuentas
+     * Creates new form frmvistaareas
      */
-    public frmvistaCuentas() {
+    public frmvistaareas() {
         initComponents();
         mostrar("");
     }
@@ -28,7 +32,7 @@ public class frmvistaCuentas extends javax.swing.JFrame {
     void mostrar(String buscar) {
         try {
             DefaultTableModel modelo;
-            fT_cuentas func = new fT_cuentas();
+            fT_area1 func = new fT_area1();
             modelo = func.mostrar(buscar);
 
             tablalistado.setModel(modelo);
@@ -56,7 +60,7 @@ public class frmvistaCuentas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 153));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listado de Cuentas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Listado de Areas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
 
         tablalistado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -136,7 +140,7 @@ public class frmvistaCuentas extends javax.swing.JFrame {
                     .addComponent(btnbuscar)
                     .addComponent(btnsalir))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)
                 .addGap(9, 9, 9)
                 .addComponent(lbltotalregistros))
         );
@@ -167,26 +171,19 @@ public class frmvistaCuentas extends javax.swing.JFrame {
 
     private void tablalistadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMousePressed
         // TODO add your handling code here:
-          if (evt.getClickCount() == 2) {
-            int fila= tablalistado.getSelectedRow();
-            String cod;
-            String id;
+        if (evt.getClickCount() == 2) {
+            int fila = tablalistado.getSelectedRow();
+            String sigla;
             String valor;
-            String depre;
-            
-            id=tablalistado.getValueAt(fila, 0).toString();
-            cod=tablalistado.getValueAt(fila, 1).toString();
-            valor=tablalistado.getValueAt(fila, 2).toString();
-            depre= tablalistado.getValueAt(fila, 4).toString();
-            
-            frmActivo.txtid_cuenta.setText(id);
-            frmActivo.txtcod.setText(cod);
-            frmActivo.txtcuenta.setText(valor);
-            frmActivo.txtdepreciacion.setText(depre);
-           
-            
+
+            valor = tablalistado.getValueAt(fila, 1).toString();
+            sigla = tablalistado.getValueAt(fila, 2).toString();
+
+            frmActivo.txtsiglaarea.setText(sigla);
+            frmActivo.txtarea.setText(valor);
+
             this.dispose();
-            
+
         }
     }//GEN-LAST:event_tablalistadoMousePressed
 
@@ -217,20 +214,20 @@ public class frmvistaCuentas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmvistaCuentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmvistaareas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmvistaCuentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmvistaareas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmvistaCuentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmvistaareas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmvistaCuentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmvistaareas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmvistaCuentas().setVisible(true);
+                new frmvistaareas().setVisible(true);
             }
         });
     }

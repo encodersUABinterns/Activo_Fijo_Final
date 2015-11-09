@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Blady
  */
-public class frmT_secciones extends javax.swing.JFrame {
+public class frmT_secciones extends javax.swing.JInternalFrame {
 
     public frmT_secciones() {
         initComponents();

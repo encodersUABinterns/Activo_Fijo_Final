@@ -364,8 +364,14 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtseciondpto">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="txtid_subarea">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="btnbuscardptos">
           <Properties>
@@ -468,6 +474,9 @@
         <Component class="javax.swing.JTextField" name="txtsiglafacultad">
         </Component>
         <Component class="javax.swing.JTextField" name="txtcodsubarea">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="txtdepreciacion">
           <AuxValues>

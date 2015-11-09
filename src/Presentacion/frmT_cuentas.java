@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Blady
  */
-public class frmT_cuentas extends javax.swing.JFrame{
+public class frmT_cuentas extends javax.swing.JInternalFrame{
 
     private String accion = "guardar";
 
@@ -247,9 +247,6 @@ public class frmT_cuentas extends javax.swing.JFrame{
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tablalistadoMouseClicked(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                tablalistadoMousePressed(evt);
-            }
         });
         jScrollPane3.setViewportView(tablalistado);
 
@@ -464,30 +461,6 @@ public class frmT_cuentas extends javax.swing.JFrame{
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnsalirActionPerformed
-
-    private void tablalistadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMousePressed
-       if (evt.getClickCount() == 2) {
-            int fila= tablalistado.getSelectedRow();
-            String cod;
-            String id;
-            String valor;
-            String depre;
-            
-            id=tablalistado.getValueAt(fila, 0).toString();
-            cod=tablalistado.getValueAt(fila, 1).toString();
-            valor=tablalistado.getValueAt(fila, 2).toString();
-            depre= tablalistado.getValueAt(fila, 4).toString();
-            
-            frmActivo.txtid_cuenta.setText(id);
-            frmActivo.txtcod.setText(cod);
-            frmActivo.txtcuenta.setText(valor);
-            frmActivo.txtdepreciacion.setText(depre);
-           
-            
-            this.dispose();
-            
-        }
-    }//GEN-LAST:event_tablalistadoMousePressed
 
     /**
      * @param args the command line arguments

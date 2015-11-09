@@ -1,10 +1,6 @@
 package Presentacion;
 
 import Datos.vActivo;
-import Datos.vT_area1;
-import Datos.vT_area2;
-import Datos.vT_cuentas;
-import Datos.vT_subareas;
 import Logica.fActivo;
 import java.sql.Date;
 import java.util.Calendar;
@@ -627,7 +623,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnguardarActionPerformed
 
     private void btnbuscardptosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscardptosActionPerformed
-        frmT_secciones frmt = new frmT_secciones();
+        frmvistasecciones frmt = new frmvistasecciones();
         frmt.toFront();
         frmt.setVisible(true);
     }//GEN-LAST:event_btnbuscardptosActionPerformed
@@ -658,19 +654,19 @@ public class frmActivo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnsalirActionPerformed
 
     private void btnbuscarcuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarcuentaActionPerformed
-        frmT_cuentas form = new frmT_cuentas();
+        frmvistaCuentas form = new frmvistaCuentas();
         form.toFront();
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarcuentaActionPerformed
 
     private void btnbuscarfacultadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarfacultadesActionPerformed
-        frmT_area2 form = new frmT_area2();
+        vistafaculd_subareas form = new vistafaculd_subareas();
         form.toFront();
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarfacultadesActionPerformed
 
     private void btnbuscarareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarareaActionPerformed
-        frmT_area1 form = new frmT_area1();
+        frmvistaareas form = new frmvistaareas();
         form.toFront();
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarareaActionPerformed
@@ -746,15 +742,15 @@ public class frmActivo extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtcantidad;
     public static javax.swing.JTextField txtcod;
-    private javax.swing.JTextField txtcodsubarea;
+    public static javax.swing.JTextField txtcodsubarea;
     private javax.swing.JTextField txtcosto;
     public static javax.swing.JTextField txtcuenta;
     public static javax.swing.JTextField txtdepreciacion;
     private javax.swing.JTextField txtfacultades;
     private javax.swing.JTextField txtid_activo;
     public static javax.swing.JTextField txtid_cuenta;
-    private javax.swing.JTextField txtid_subarea;
-    private javax.swing.JTextField txtseciondpto;
+    public static javax.swing.JTextField txtid_subarea;
+    public static javax.swing.JTextField txtseciondpto;
     public static javax.swing.JTextField txtsiglaarea;
     private javax.swing.JTextField txtsiglacarrera;
     private javax.swing.JTextField txtsiglafacultad;

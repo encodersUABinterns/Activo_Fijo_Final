@@ -31,6 +31,7 @@ public class frmInicio extends javax.swing.JFrame {
         cutMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
@@ -44,7 +45,7 @@ public class frmInicio extends javax.swing.JFrame {
 
         editMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/Inicio.png"))); // NOI18N
         editMenu.setMnemonic('e');
-        editMenu.setText("Sis Activo");
+        editMenu.setText("Activo");
 
         cutMenuItem.setMnemonic('t');
         cutMenuItem.setText("Registrar");
@@ -58,15 +59,23 @@ public class frmInicio extends javax.swing.JFrame {
         menuBar.add(editMenu);
 
         helpMenu.setMnemonic('h');
-        helpMenu.setText("Secciones");
+        helpMenu.setText("Areas");
 
-        jMenuItem4.setText("Registrar");
+        jMenuItem4.setText("Area");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
             }
         });
         helpMenu.add(jMenuItem4);
+
+        jMenuItem1.setText("Subarea");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        helpMenu.add(jMenuItem1);
 
         menuBar.add(helpMenu);
 
@@ -136,7 +145,7 @@ public class frmInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_openMenuItemActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-      frmT_secciones frm = new frmT_secciones();
+      frmT_area1 frm = new frmT_area1();
       Escritorio.add(frm);
       frm.toFront();
       frm.setVisible(true);
@@ -145,6 +154,13 @@ public class frmInicio extends javax.swing.JFrame {
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         this.dispose();
     }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+       frmT_area2 frm = new frmT_area2();
+      Escritorio.add(frm);
+      frm.toFront();
+      frm.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,6 +207,7 @@ public class frmInicio extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
