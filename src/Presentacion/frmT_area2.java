@@ -62,14 +62,15 @@ public class frmT_area2 extends javax.swing.JFrame {
 
     void inhabilitar() {
         txtidarea2.setVisible(false);
-        txtidarea.setEnabled(false);
+        txtidarea.setVisible(false);
 
         txtnombre.setEnabled(false);
         txtsigla.setEnabled(false);
         txtprovincia.setEnabled(false);
-        txtsiglaprov.setEditable(false);
+        txtsiglaprov.setEnabled(false);
         txtcarrera.setEnabled(false);
-        txtsiglacarrera.setEditable(false);
+        txtsiglacarrera.setEnabled(false);
+        txtarea.setEnabled(false);
         
 
         btnguardar.setEnabled(false);
@@ -82,7 +83,7 @@ public class frmT_area2 extends javax.swing.JFrame {
 
     void habilitar() {
         txtidarea2.setVisible(false);
-        txtidarea.setEnabled(false);
+        txtidarea.setVisible(false);
 
         txtnombre.setEnabled(true);
         txtsigla.setEnabled(true);
@@ -90,6 +91,7 @@ public class frmT_area2 extends javax.swing.JFrame {
         txtsiglaprov.setEditable(true);
         txtcarrera.setEnabled(true);
         txtsiglacarrera.setEditable(true);
+        txtarea.setEnabled(true);
 
         btnguardar.setEnabled(true);
         btncancelar.setEnabled(true);

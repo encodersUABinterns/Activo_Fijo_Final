@@ -471,14 +471,17 @@ public class frmT_cuentas extends javax.swing.JFrame{
             String cod;
             String id;
             String valor;
+            String depre;
             
             id=tablalistado.getValueAt(fila, 0).toString();
             cod=tablalistado.getValueAt(fila, 1).toString();
             valor=tablalistado.getValueAt(fila, 2).toString();
+            depre= tablalistado.getValueAt(fila, 4).toString();
             
             frmActivo.txtid_cuenta.setText(id);
             frmActivo.txtcod.setText(cod);
             frmActivo.txtcuenta.setText(valor);
+            frmActivo.txtdepreciacion.setText(depre);
            
             
             this.dispose();
