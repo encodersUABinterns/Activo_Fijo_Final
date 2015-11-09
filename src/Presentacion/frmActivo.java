@@ -641,8 +641,9 @@ public class frmActivo extends javax.swing.JInternalFrame {
         int fila = tblistado.rowAtPoint(evt.getPoint());
 
         txtid_activo.setText(tblistado.getValueAt(fila, 0).toString());
+        txtcuenta.setText(tblistado.getValueAt(fila, 1).toString());
 
-        jTextdescripcion.setText(tblistado.getValueAt(fila, 3).toString());
+        jTextdescripcion.setText(tblistado.getValueAt(fila, 1).toString());
 
         txtcantidad.setText(tblistado.getValueAt(fila, 4).toString());
         dcfechaadq.setDate(Date.valueOf(tblistado.getValueAt(fila, 5).toString()));
