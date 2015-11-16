@@ -96,7 +96,7 @@ public class frmT_area1 extends javax.swing.JInternalFrame {
         btneliminar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("AREAS");
@@ -155,12 +155,10 @@ public class frmT_area1 extends javax.swing.JInternalFrame {
                         .addGap(84, 84, 84)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtsigla, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtsigla, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel7))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnnuevo)
@@ -189,7 +187,7 @@ public class frmT_area1 extends javax.swing.JInternalFrame {
                     .addComponent(btnguardar))
                 .addGap(57, 57, 57)
                 .addComponent(jLabel7)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 153));
@@ -271,7 +269,7 @@ public class frmT_area1 extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnsalir))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,7 +302,7 @@ public class frmT_area1 extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -427,13 +425,16 @@ public class frmT_area1 extends javax.swing.JInternalFrame {
     if (evt.getClickCount() == 2) {
             int fila = tablalistado.getSelectedRow();
             String sigla;
-            String valor;
+            String codigo;
+            String nombre;
 
-            valor = tablalistado.getValueAt(fila, 1).toString();
+            codigo = tablalistado.getValueAt(fila, 0).toString();
+            nombre = tablalistado.getValueAt(fila, 1).toString();
             sigla = tablalistado.getValueAt(fila, 2).toString();
-
-            frmActivo.txtsiglaarea.setText(sigla);
-            frmActivo.txtarea.setText(valor);
+            
+            frmT_area2.txtidarea2.setText(codigo);
+            frmT_area2.txtnombre2.setText(nombre);
+            frmT_area2.txtsigla2.setText(sigla);
             this.dispose();
 
         }

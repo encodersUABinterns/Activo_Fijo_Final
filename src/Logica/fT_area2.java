@@ -53,7 +53,7 @@ public class fT_area2 {
     }
      public boolean insertar(vT_area2 dts) {
         sSQL = "insert into t_area2 (nombre,sigla,provincia,sigla_provincia,carrera,sigla_carrera,id_area1)"
-                + "values (?,?,?,?,?)";
+                + "values (?,?,?,?,?,?,?)";
         try {
 
             PreparedStatement pst = cn.prepareStatement(sSQL);

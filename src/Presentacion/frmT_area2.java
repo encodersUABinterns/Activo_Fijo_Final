@@ -61,44 +61,46 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
     }
 
     void inhabilitar() {
-        txtidarea2.setVisible(false);
-        txtidarea.setVisible(false);
+//        txtidarea.setVisible(false);
+//        txtidarea2.setVisible(false);
 
         txtnombre.setEnabled(false);
-        txtsigla.setEnabled(false);
+        txtsiglaFac.setEnabled(false);
         txtprovincia.setEnabled(false);
         txtsiglaprov.setEnabled(false);
         txtcarrera.setEnabled(false);
         txtsiglacarrera.setEnabled(false);
-        txtarea.setEnabled(false);
-        
+        txtnombre2.setEnabled(false);
+       // txtsigla2.setEnable(false);
 
         btnguardar.setEnabled(false);
         btncancelar.setEnabled(false);
         btneliminar.setEnabled(false);
         btnbuscararea.setEnabled(false);
 
-        txtidarea.setText("");
+        txtidarea2.setText("");
     }
 
     void habilitar() {
-        txtidarea2.setVisible(false);
-        txtidarea.setVisible(false);
+//        txtidarea.setVisible(false);
+//        txtidarea2.setVisible(false);
 
         txtnombre.setEnabled(true);
-        txtsigla.setEnabled(true);
+        txtsiglaFac.setEnabled(true);
         txtprovincia.setEnabled(true);
         txtsiglaprov.setEditable(true);
         txtcarrera.setEnabled(true);
         txtsiglacarrera.setEditable(true);
-        txtarea.setEnabled(true);
+        txtnombre2.setEnabled(true);
+         txtsiglaprov.setEnabled(true);
+        txtsiglacarrera.setEnabled(true);
 
         btnguardar.setEnabled(true);
         btncancelar.setEnabled(true);
         btneliminar.setEnabled(true);
         btnbuscararea.setEnabled(true);
 
-        txtidarea.setText("");
+        txtidarea2.setText("");
     }
 
     @SuppressWarnings("unchecked")
@@ -114,18 +116,19 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
         btnguardar = new javax.swing.JButton();
         btncancelar = new javax.swing.JButton();
         txtnombre = new javax.swing.JTextField();
-        txtidarea = new javax.swing.JTextField();
-        txtarea = new javax.swing.JTextField();
+        txtidarea2 = new javax.swing.JTextField();
+        txtnombre2 = new javax.swing.JTextField();
         btnbuscararea = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        txtsigla = new javax.swing.JTextField();
-        txtidarea2 = new javax.swing.JTextField();
+        txtsiglaFac = new javax.swing.JTextField();
+        txtidarea = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtprovincia = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtcarrera = new javax.swing.JTextField();
         txtsiglaprov = new javax.swing.JTextField();
         txtsiglacarrera = new javax.swing.JTextField();
+        txtsigla2 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablalistado = new javax.swing.JTable();
@@ -203,64 +206,66 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel5)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addComponent(btnnuevo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnguardar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btncancelar)
+                        .addGap(45, 45, 45))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                                .addComponent(btnnuevo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnguardar)
-                                .addGap(18, 18, 18)
-                                .addComponent(btncancelar))
+                            .addComponent(jLabel6)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(17, 17, 17)
-                                        .addComponent(jLabel4))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel2)
                                             .addComponent(jLabel3))
-                                        .addGap(84, 84, 84)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtprovincia, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtcarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel6))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(84, 84, 84))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addGap(17, 17, 17)
+                                        .addComponent(jLabel4)
+                                        .addGap(65, 65, 65)
+                                        .addComponent(txtidarea2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtnombre2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                                    .addComponent(txtprovincia, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtnombre, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtcarrera, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtsigla, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtsiglaFac, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtsiglaprov, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtsiglacarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(txtidarea2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(16, 16, 16))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtarea, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnbuscararea, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(txtsigla2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnbuscararea, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtidarea2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtsigla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtsiglaFac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtprovincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,10 +278,11 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
                     .addComponent(txtsiglacarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnbuscararea)
-                    .addComponent(txtidarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(txtidarea2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtsigla2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
@@ -354,22 +360,23 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(361, 361, 361)
+                        .addGap(339, 339, 339)
                         .addComponent(lblconsumo)
                         .addGap(54, 54, 54)
                         .addComponent(lbltotalregistros, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btneliminar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnsalir))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(txtbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(46, 46, 46)
+                            .addComponent(btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(btneliminar)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnsalir))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -402,12 +409,12 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1)
                         .addGap(78, 78, 78)
                         .addComponent(pv)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 558, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -435,14 +442,14 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
 
     private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
         // TODO add your handling code here:
-        if (txtidarea.getText().length() == 0) {
+        if (txtidarea2.getText().length() == 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes Seleccionar un area");
             btnbuscararea.requestFocus();
             return;
         }
-        if (txtsigla.getText().length() == 0) {
+        if (txtsiglaFac.getText().length() == 0) {
             JOptionPane.showConfirmDialog(rootPane, "Debes ingresar una sigla del area");
-            txtsigla.requestFocus();
+            txtsiglaFac.requestFocus();
             return;
         }
 
@@ -450,12 +457,12 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
         fT_area2 func = new fT_area2();
 
         dts.setNombre(txtnombre.getText());
-        dts.setSigla(txtsigla.getText());
+        dts.setSigla(txtsiglaFac.getText());
         dts.setProvincia(txtprovincia.getText());
         dts.setSiglaprovincia(txtsiglaprov.getText());
         dts.setCarrera(txtcarrera.getText());
         dts.setSiglacarrera(txtsiglacarrera.getText());
-        dts.setId_area1(Integer.parseInt(txtidarea.getText()));
+        dts.setId_area1(Integer.parseInt(txtidarea2.getText()));
 
         if (accion.equals("guardar")) {
             if (func.insertar(dts)) {
@@ -466,7 +473,7 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
             }
 
         } else if (accion.equals("editar")) {
-            dts.setId_area2(Integer.parseInt(txtidarea2.getText()));
+            dts.setId_area2(Integer.parseInt(txtidarea.getText()));
 
             if (func.editar(dts)) {
                 JOptionPane.showMessageDialog(rootPane, "Se ha modificado exitosamente");
@@ -483,9 +490,14 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
 
     private void btnbuscarareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarareaActionPerformed
         // TODO add your handling code here:
-        frmvistaareas form = new frmvistaareas();
+        frmT_area1 form = new frmT_area1();
+        frmInicio.Escritorio.add(form);
         form.toFront();
         form.setVisible(true);
+//         frmT_area1 form = new frmT_area1();
+//        frmInicio.Escritorio.add(form);
+//        form.toFront();
+//        form.setVisible(true);
     }//GEN-LAST:event_btnbuscarareaActionPerformed
 
     private void tablalistadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMouseClicked
@@ -497,14 +509,16 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
 
         int fila = tablalistado.rowAtPoint(evt.getPoint());
 
-        txtidarea2.setText(tablalistado.getValueAt(fila, 0).toString());
+        txtidarea.setText(tablalistado.getValueAt(fila, 0).toString());
         txtnombre.setText(tablalistado.getValueAt(fila, 1).toString());
-        txtsigla.setText(tablalistado.getValueAt(fila, 2).toString());
+        txtsiglaFac.setText(tablalistado.getValueAt(fila, 2).toString());
         txtprovincia.setText(tablalistado.getValueAt(fila, 3).toString());
         txtsiglaprov.setText(tablalistado.getValueAt(fila, 4).toString());
         txtcarrera.setText(tablalistado.getValueAt(fila, 5).toString());
         txtsiglacarrera.setText(tablalistado.getValueAt(fila, 6).toString());
-        txtidarea.setText(tablalistado.getValueAt(fila, 7).toString());
+        txtidarea2.setText(tablalistado.getValueAt(fila, 7).toString());
+        txtsigla2.setText(tablalistado.getValueAt(fila, 8).toString());
+        txtnombre2.setText(tablalistado.getValueAt(fila, 9).toString());
     }//GEN-LAST:event_tablalistadoMouseClicked
 
     private void btnbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarActionPerformed
@@ -514,14 +528,14 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
 
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
         // TODO add your handling code here:
-        if (!txtidarea2.getText().equals("")) {
+        if (!txtidarea.getText().equals("")) {
             int confirmacion = JOptionPane.showConfirmDialog(rootPane, "Estás seguro de Eliminar el Area", "Confirmar", 2);
 
             if (confirmacion == 0) {
                 fT_area2 func = new fT_area2();
                 vT_area2 dts = new vT_area2();
 
-                dts.setId_area1(Integer.parseInt(txtidarea2.getText()));
+                dts.setId_area1(Integer.parseInt(txtidarea.getText()));
                 func.eliminar(dts);
                 mostrar("");
                 inhabilitar();
@@ -539,15 +553,28 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
     private void tablalistadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMousePressed
       if (evt.getClickCount() == 2) {
             int fila = tablalistado.getSelectedRow();
-            String sigla;
-            String valor;
+            String siglaCarrera;
+            String siglaFacultad;
+            String siglaProvincia;
+            String nombreFacultad;
+            String area;
+            String siglaArea;
 
-            valor = tablalistado.getValueAt(fila, 1).toString();
-            sigla = tablalistado.getValueAt(fila, 2).toString();
+            siglaCarrera= tablalistado.getValueAt(fila, 6).toString();
+            siglaFacultad = tablalistado.getValueAt(fila, 2).toString();
+            siglaProvincia = tablalistado.getValueAt(fila, 4).toString();
+            nombreFacultad = tablalistado.getValueAt(fila, 1).toString();
+           // area = tablalistado.getValueAt(fila, 4).toString();
+            siglaArea= txtsigla2.toString();
+          //  sigla = tablalistado.getValueAt(fila, 2).toString();
 
-            frmActivo.txtsiglaarea.setText(sigla);
-            frmActivo.txtarea.setText(valor);
+            frmActivo.txtsiglacarrera.setText(siglaCarrera);
+            frmActivo.txtsiglafacultad.setText(siglaFacultad);
+            frmActivo.txtsiglaprovincia.setText(siglaProvincia);
+            frmActivo.txtfacultades.setText(nombreFacultad);
+            frmActivo.txtsiglaarea.setText(txtsigla2.getText());
 
+            
             this.dispose();
 
         }
@@ -610,14 +637,15 @@ public class frmT_area2 extends javax.swing.JInternalFrame {
     private javax.swing.JLabel lbltotalregistros;
     private javax.swing.JLabel pv;
     private javax.swing.JTable tablalistado;
-    public static javax.swing.JTextField txtarea;
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtcarrera;
-    public static javax.swing.JTextField txtidarea;
-    private javax.swing.JTextField txtidarea2;
+    private javax.swing.JTextField txtidarea;
+    public static javax.swing.JTextField txtidarea2;
     private javax.swing.JTextField txtnombre;
+    public static javax.swing.JTextField txtnombre2;
     private javax.swing.JTextField txtprovincia;
-    private javax.swing.JTextField txtsigla;
+    public static javax.swing.JTextField txtsigla2;
+    private javax.swing.JTextField txtsiglaFac;
     private javax.swing.JTextField txtsiglacarrera;
     private javax.swing.JTextField txtsiglaprov;
     // End of variables declaration//GEN-END:variables

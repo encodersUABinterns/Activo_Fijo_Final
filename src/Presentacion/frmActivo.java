@@ -39,14 +39,14 @@ public class frmActivo extends javax.swing.JInternalFrame {
     }
 
     void inhabilitar() {
-        txtid_activo.setVisible(false);
-        txtid_subarea.setVisible(false);
-        txtid_cuenta.setVisible(false);
-        txtsiglaarea.setVisible(false);
-        txtsiglaprovincia.setVisible(false);
-        txtsiglafacultad.setVisible(false);
-        txtsiglacarrera.setVisible(false);
-        txtdepreciacion.setVisible(false);
+//        txtid_activo.setVisible(false);
+//        txtid_subarea.setVisible(false);
+//        txtid_cuenta.setVisible(false);
+//        txtsiglaarea.setVisible(false);
+//        txtsiglaprovincia.setVisible(false);
+//        txtsiglafacultad.setVisible(false);
+//        txtsiglacarrera.setVisible(false);
+//        txtdepreciacion.setVisible(false);
 
         jTextdescripcion.setEnabled(false);
         dcfechaadq.setEnabled(false);
@@ -74,14 +74,14 @@ public class frmActivo extends javax.swing.JInternalFrame {
     }
 
     void habilitar() {
-        txtid_activo.setVisible(false);
-        txtid_subarea.setVisible(false);
-        txtid_cuenta.setVisible(false);
-        txtsiglaarea.setVisible(false);
-        txtsiglaprovincia.setVisible(false);
-        txtsiglafacultad.setVisible(false);
-        txtsiglacarrera.setVisible(false);
-        txtdepreciacion.setVisible(false);
+//        txtid_activo.setVisible(false);
+//        txtid_subarea.setVisible(false);
+//        txtid_cuenta.setVisible(false);
+//        txtsiglaarea.setVisible(false);
+//        txtsiglaprovincia.setVisible(false);
+//        txtsiglafacultad.setVisible(false);
+//        txtsiglacarrera.setVisible(false);
+//        txtdepreciacion.setVisible(false);
 
         jTextdescripcion.setEnabled(true);
         dcfechaadq.setEnabled(true);
@@ -159,7 +159,6 @@ public class frmActivo extends javax.swing.JInternalFrame {
         txtfacultades = new javax.swing.JTextField();
         txtsiglaprovincia = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        btnbuscararea = new javax.swing.JButton();
         txtarea = new javax.swing.JTextField();
         txtsiglaarea = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
@@ -176,6 +175,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
         btnsalir = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblistado = new javax.swing.JTable();
+        btnbuscararea = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -247,10 +247,9 @@ public class frmActivo extends javax.swing.JInternalFrame {
 
         jLabel14.setText("FACULTADES/SUBAREAS");
 
-        btnbuscararea.setText("....");
-        btnbuscararea.addActionListener(new java.awt.event.ActionListener() {
+        txtarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbuscarareaActionPerformed(evt);
+                txtareaActionPerformed(evt);
             }
         });
 
@@ -299,8 +298,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
                                         .addComponent(txtsiglaarea, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtarea, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnbuscararea))
+                                        .addGap(55, 55, 55))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(txtid_subarea, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,8 +371,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
                             .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(txtarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtsiglaarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnbuscararea)))
+                                .addComponent(txtsiglaarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtfacultades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -390,7 +387,7 @@ public class frmActivo extends javax.swing.JInternalFrame {
                             .addComponent(jLabel12)
                             .addComponent(btnbuscardptos)
                             .addComponent(txtcodsubarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGap(18, 32, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -504,6 +501,13 @@ public class frmActivo extends javax.swing.JInternalFrame {
                 .addComponent(lbltotalregistros))
         );
 
+        btnbuscararea.setText("....");
+        btnbuscararea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbuscarareaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -513,6 +517,8 @@ public class frmActivo extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
+                        .addGap(335, 335, 335)
+                        .addComponent(btnbuscararea)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -523,8 +529,13 @@ public class frmActivo extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnbuscararea)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -675,6 +686,10 @@ public class frmActivo extends javax.swing.JInternalFrame {
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarareaActionPerformed
 
+    private void txtareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtareaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtareaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -750,15 +765,15 @@ public class frmActivo extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtcosto;
     public static javax.swing.JTextField txtcuenta;
     public static javax.swing.JTextField txtdepreciacion;
-    private javax.swing.JTextField txtfacultades;
+    public static javax.swing.JTextField txtfacultades;
     private javax.swing.JTextField txtid_activo;
     public static javax.swing.JTextField txtid_cuenta;
     public static javax.swing.JTextField txtid_subarea;
     public static javax.swing.JTextField txtseciondpto;
     public static javax.swing.JTextField txtsiglaarea;
-    private javax.swing.JTextField txtsiglacarrera;
-    private javax.swing.JTextField txtsiglafacultad;
-    private javax.swing.JTextField txtsiglaprovincia;
+    public static javax.swing.JTextField txtsiglacarrera;
+    public static javax.swing.JTextField txtsiglafacultad;
+    public static javax.swing.JTextField txtsiglaprovincia;
     private javax.swing.JTextField txtvidaestimada;
     // End of variables declaration//GEN-END:variables
 }
