@@ -623,9 +623,10 @@ public class frmActivo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnguardarActionPerformed
 
     private void btnbuscardptosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscardptosActionPerformed
-        frmvistasecciones frmt = new frmvistasecciones();
-        frmt.toFront();
-        frmt.setVisible(true);
+        frmT_secciones form = new frmT_secciones();
+        frmInicio.Escritorio.add(form);
+        form.toFront();
+        form.setVisible(true);
     }//GEN-LAST:event_btnbuscardptosActionPerformed
 
     private void tblistadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblistadoMouseClicked
@@ -654,19 +655,22 @@ public class frmActivo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnsalirActionPerformed
 
     private void btnbuscarcuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarcuentaActionPerformed
-        frmvistaCuentas form = new frmvistaCuentas();
+        frmT_cuentas form = new frmT_cuentas();
+        frmInicio.Escritorio.add(form);
         form.toFront();
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarcuentaActionPerformed
 
     private void btnbuscarfacultadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarfacultadesActionPerformed
-        vistafaculd_subareas form = new vistafaculd_subareas();
+        frmT_area2 form = new frmT_area2();
+        frmInicio.Escritorio.add(form);
         form.toFront();
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarfacultadesActionPerformed
 
     private void btnbuscarareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarareaActionPerformed
-        frmvistaareas form = new frmvistaareas();
+        frmT_area1 form = new frmT_area1();
+        frmInicio.Escritorio.add(form);
         form.toFront();
         form.setVisible(true);
     }//GEN-LAST:event_btnbuscarareaActionPerformed
