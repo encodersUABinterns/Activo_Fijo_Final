@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Blady
  */
-public class frmT_area1 extends javax.swing.JFrame{
+public class frmT_area1 extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form frmT_area1
@@ -96,7 +96,7 @@ public class frmT_area1 extends javax.swing.JFrame{
         btneliminar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("AREAS");
@@ -209,6 +209,9 @@ public class frmT_area1 extends javax.swing.JFrame{
         tablalistado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tablalistadoMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                tablalistadoMousePressed(evt);
             }
         });
         jScrollPane3.setViewportView(tablalistado);
@@ -419,6 +422,22 @@ public class frmT_area1 extends javax.swing.JFrame{
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnsalirActionPerformed
+
+    private void tablalistadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMousePressed
+    if (evt.getClickCount() == 2) {
+            int fila = tablalistado.getSelectedRow();
+            String sigla;
+            String valor;
+
+            valor = tablalistado.getValueAt(fila, 1).toString();
+            sigla = tablalistado.getValueAt(fila, 2).toString();
+
+            frmActivo.txtsiglaarea.setText(sigla);
+            frmActivo.txtarea.setText(valor);
+            this.dispose();
+
+        }
+    }//GEN-LAST:event_tablalistadoMousePressed
 
     /**
      * @param args the command line arguments

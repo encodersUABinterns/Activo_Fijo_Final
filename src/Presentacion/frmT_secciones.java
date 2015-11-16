@@ -243,6 +243,9 @@ public class frmT_secciones extends javax.swing.JInternalFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tablalistadoMouseClicked(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                tablalistadoMousePressed(evt);
+            }
         });
         jScrollPane3.setViewportView(tablalistado);
 
@@ -453,6 +456,27 @@ public class frmT_secciones extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnsalirActionPerformed
+
+    private void tablalistadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablalistadoMousePressed
+     if (evt.getClickCount() == 2) {
+            int fila = tablalistado.getSelectedRow();
+            String codigo;
+            String id;
+            String valor;
+
+            id= tablalistado.getValueAt(fila, 0).toString();
+            valor = tablalistado.getValueAt(fila, 1).toString();
+            codigo = tablalistado.getValueAt(fila, 2).toString();
+
+            frmActivo.txtid_subarea.setText(id);
+            frmActivo.txtseciondpto.setText(valor);
+            frmActivo.txtcodsubarea.setText(codigo);
+            
+
+            this.dispose();
+
+        }
+    }//GEN-LAST:event_tablalistadoMousePressed
 
     /**
      * @param args the command line arguments
